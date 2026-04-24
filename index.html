@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entwicklerprofil</title>
+    <title>Entwicklerprofil - Sebastian Kroll</title>
     <style>
         /* Grundlegende Stile */
         body {
@@ -17,22 +17,22 @@
             min-height: 100vh;
         }
 
-        /* Banner-Stile */
-        .banner {
+        /* Banner-Container: Begrenzt die maximale Breite und Höhe */
+        .banner-container {
             width: 100%;
-            /* 1376x768 hat ein Seitenverhältnis von ca. 1.79:1.
-               Mit 'cover' behält das Bild seine Proportionen,
-               unabhängig von der Bildschirmbreite. */
-            height: auto;
-            max-width: 1376px;
-            margin: 0 auto;
-            overflow: hidden;
-            background-image: url('/me_dev.jpg');
-            background-size: cover;
-            background-position: center;
-            /* Der Padding-Hack sorgt dafür, dass der Platzhalter immer
-               das korrekte Seitenverhältnis (768/1376 = ~55.8%) behält. */
-            padding-bottom: 55.8%;
+            max-width: 1000px; /* Sinnvolle maximale Breite, damit es nicht riesig wirkt */
+            margin: 2rem auto 0 auto; /* Zentriert und mit Abstand nach oben */
+            padding: 0 1rem;
+            box-sizing: border-box;
+        }
+
+        /* Bild-Stile: Sorgt dafür, dass das Bild skaliert, ohne beschnitten zu werden */
+        .banner-image {
+            width: 100%;
+            height: auto; /* Behält das Seitenverhältnis bei */
+            display: block;
+            border-radius: 12px; /* Optionale Abrundung für einen modernen Look */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Dezenter Schatten */
         }
 
         /* Inhalts-Stile */
@@ -40,7 +40,7 @@
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
-            flex-grow: 1; /* Schiebt den Footer nach unten */
+            flex-grow: 1; 
             text-align: center;
         }
 
@@ -55,28 +55,29 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Akzent-Text */
         .highlight {
             background-color: #e9ecef;
-            padding: 0.5rem 1rem;
+            padding: 1rem;
             border-radius: 8px;
             border: 1px solid #dee2e6;
             font-weight: 600;
+            display: inline-block;
         }
 
         /* Footer-Stile */
         footer {
             background-color: #343a40;
             color: #fff;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             text-align: center;
             width: 100%;
+            margin-top: 2rem;
         }
 
         footer a {
-            color: #ddd;
+            color: #adb5bd;
             text-decoration: none;
-            margin: 0 1rem;
+            margin: 0 10px;
             font-size: 0.9rem;
         }
 
@@ -84,27 +85,36 @@
             color: #fff;
             text-decoration: underline;
         }
+
+        .copyright {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
 
-    <div class="banner"></div>
+    <div class="banner-container">
+        <img src="/me_dev.jpg" alt="Sebastian Kroll - App Development Banner" class="banner-image">
+    </div>
 
     <main class="content">
         <h1>Willkommen auf meinem Entwicklerprofil</h1>
-        <p>Ich bin ein leidenschaftlicher Entwickler mit Fokus auf innovative und benutzerfreundliche Anwendungen.</p>
+        <p>Ich bin Sebastian Kroll, Ihr Partner für professionelle App-Entwicklung und innovative Spiele.</p>
         
-        <p class="highlight">
+        <div class="highlight">
             🚧 Aktuell entwickle ich eine neue App! Schau bald wieder vorbei, um sie hier zu sehen. 🚧
-        </p>
+        </div>
 
-        <p>In der Zwischenzeit kannst du mich gerne kontaktieren, um mehr über meine bisherigen Projekte zu erfahren.</p>
+        <p style="margin-top: 20px;">
+            Haben Sie eine Idee oder suchen Sie Unterstützung für Ihr nächstes Projekt? Kontaktieren Sie mich gerne.
+        </p>
     </main>
 
     <footer>
-        <div>&copy; 2024 Dein Name. Alle Rechte vorbehalten.</div>
-        <div>
-            <a href="/terms.html">Nutzungsbedingungen</a> |
+        <div class="copyright">&copy; 2026 Sebastian Kroll. Alle Rechte vorbehalten.</div>
+        <div class="footer-links">
+            <a href="/terms.html">Nutzungsbedingungen</a>
+            <span style="color: #6c757d;">|</span>
             <a href="/privacy-policy.html">Datenschutzerklärung</a>
         </div>
     </footer>
