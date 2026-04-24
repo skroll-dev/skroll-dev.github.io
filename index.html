@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entwicklerprofil</title>
+    <style>
+        /* Grundlegende Stile */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Banner-Stile */
+        .banner {
+            width: 100%;
+            /* 1376x768 hat ein Seitenverhältnis von ca. 1.79:1.
+               Mit 'cover' behält das Bild seine Proportionen,
+               unabhängig von der Bildschirmbreite. */
+            height: auto;
+            max-width: 1376px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-image: url('/me_dev.jpg');
+            background-size: cover;
+            background-position: center;
+            /* Der Padding-Hack sorgt dafür, dass der Platzhalter immer
+               das korrekte Seitenverhältnis (768/1376 = ~55.8%) behält. */
+            padding-bottom: 55.8%;
+        }
+
+        /* Inhalts-Stile */
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex-grow: 1; /* Schiebt den Footer nach unten */
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Akzent-Text */
+        .highlight {
+            background-color: #e9ecef;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            font-weight: 600;
+        }
+
+        /* Footer-Stile */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner"></div>
+
+    <main class="content">
+        <h1>Willkommen auf meinem Entwicklerprofil</h1>
+        <p>Ich bin ein leidenschaftlicher Entwickler mit Fokus auf innovative und benutzerfreundliche Anwendungen.</p>
+        
+        <p class="highlight">
+            🚧 Aktuell entwickle ich eine neue App! Schau bald wieder vorbei, um sie hier zu sehen. 🚧
+        </p>
+
+        <p>In der Zwischenzeit kannst du mich gerne kontaktieren, um mehr über meine bisherigen Projekte zu erfahren.</p>
+    </main>
+
+    <footer>
+        <div>&copy; 2024 Dein Name. Alle Rechte vorbehalten.</div>
+        <div>
+            <a href="/terms.html">Nutzungsbedingungen</a> |
+            <a href="/privacy-policy.html">Datenschutzerklärung</a>
+        </div>
+    </footer>
+
+</body>
+</html>
